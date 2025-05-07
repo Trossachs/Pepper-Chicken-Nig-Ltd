@@ -1,0 +1,111 @@
+export interface MealType {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+  image: string;
+  category: 'main' | 'soup' | 'sides' | 'drinks';
+  featured?: boolean;
+}
+
+export const meals: MealType[] = [
+  {
+    id: 1,
+    name: "Jollof Rice with Chicken",
+    description: "Our signature one-pot rice dish cooked with tomatoes, peppers, and aromatic spices, served with perfectly grilled chicken.",
+    price: 3500,
+    image: "https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+    category: 'main',
+    featured: true
+  },
+  {
+    id: 2,
+    name: "Egusi Soup with Pounded Yam",
+    description: "Thick melon seed soup with assorted meat and fish, served with smooth pounded yam, a perfect Nigerian comfort food.",
+    price: 4200,
+    image: "https://pixabay.com/get/g50da28ee36cd41c331e6685695c15db318d17f01c5362d47a21d3d13c59afc27e8b0b6f58340b34f5adee50eef9b5713d30f17a3568dfc77510de82ba560f9ff_1280.jpg",
+    category: 'soup',
+    featured: true
+  },
+  {
+    id: 3,
+    name: "Pepper Soup with Assorted Meat",
+    description: "Hot and spicy Nigerian soup with our secret blend of exotic spices, loaded with tender pieces of beef, goat meat, and offal.",
+    price: 3800,
+    image: "https://images.unsplash.com/photo-1545411708-dc09bab4b4c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400",
+    category: 'soup',
+    featured: true
+  },
+  {
+    id: 4,
+    name: "Nigerian Fried Rice",
+    description: "Fragrant rice with mixed vegetables, diced liver, and Nigerian spices.",
+    price: 2800,
+    image: "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+    category: 'main'
+  },
+  {
+    id: 5,
+    name: "Suya (Spiced Skewers)",
+    description: "Grilled beef skewers seasoned with our signature peanut-based spice blend.",
+    price: 3200,
+    image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+    category: 'main'
+  },
+  {
+    id: 6,
+    name: "Okra Soup",
+    description: "Fresh okra cooked with palm oil, crayfish, and stock fish, served with fufu.",
+    price: 3500,
+    image: "https://images.unsplash.com/photo-1470324161839-ce2bb6fa6bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+    category: 'soup'
+  },
+  {
+    id: 7,
+    name: "Moi Moi",
+    description: "Steamed bean pudding with boiled eggs, fish, and peppers.",
+    price: 1500,
+    image: "https://images.unsplash.com/photo-1506354666786-959d6d497f1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+    category: 'sides'
+  },
+  {
+    id: 8,
+    name: "Efo Riro",
+    description: "Rich vegetable soup with assorted meat, dried fish, and traditional spices.",
+    price: 3800,
+    image: "https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+    category: 'soup'
+  },
+  {
+    id: 9,
+    name: "Zobo Drink",
+    description: "Refreshing Nigerian hibiscus drink infused with ginger and pineapple.",
+    price: 800,
+    image: "https://images.unsplash.com/photo-1553530979-fbb9e4aee36f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+    category: 'drinks'
+  },
+  {
+    id: 10,
+    name: "Puff Puff",
+    description: "Sweet, deep-fried dough balls with a slightly crispy exterior and soft inside.",
+    price: 1200,
+    image: "https://images.unsplash.com/photo-1562847961-8f766d7383ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+    category: 'sides'
+  },
+  {
+    id: 11,
+    name: "Chapman",
+    description: "Nigerian cocktail with Fanta, Sprite, Angostura bitters, and cucumber garnish.",
+    price: 1000,
+    image: "https://images.unsplash.com/photo-1567696153798-9111f9cd3d0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+    category: 'drinks'
+  },
+  {
+    id: 12,
+    name: "Afang Soup",
+    description: "Delicious soup made with Afang leaves, waterleaf, assorted meats and seafood.",
+    price: 4000,
+    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+    category: 'soup'
+  }
+];

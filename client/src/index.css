@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;600;700&family=Montserrat:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 355 74% 32%; /* wine red */
+  --primary-foreground: 211 100% 99%;
+  --secondary: 210 70% 43%; /* dark sky blue */
+  --secondary-foreground: 0 0% 98%;
+  --accent: 60 4.8% 95.9%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+
+  /* Custom colors */
+  --wine-red: 355 74% 32%;
+  --dark-sky-blue: 210 70% 43%;
+  --neutral-bg: 0 0% 96%;
+  --dark-text: 0 0% 13%;
+  --light-text: 0 0% 96%;
+  --accent-gold: 46 65% 52%;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 355 74% 32%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 210 70% 43%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-nunito bg-neutral-bg text-dark-text transition-colors duration-200;
+  }
+
+  .dark body {
+    @apply bg-gray-900 text-gray-100;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4;
+  }
+  
+  .nav-link {
+    @apply relative font-medium transition-colors;
+  }
+  
+  .nav-link:hover {
+    @apply text-wine-red;
+  }
+  
+  .nav-link::after {
+    content: '';
+    @apply absolute w-0 h-0.5 bottom-[-3px] left-0 bg-wine-red transition-all duration-300;
+  }
+  
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+  
+  .menu-card {
+    @apply bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold font-playfair mb-4 text-dark-text;
+  }
+  
+  .section-title span {
+    @apply text-wine-red;
+  }
+  
+  .primary-btn {
+    @apply bg-wine-red text-white font-medium py-2 px-4 rounded-lg hover:bg-opacity-90 transition-colors;
+  }
+  
+  .secondary-btn {
+    @apply bg-dark-sky-blue text-white font-medium py-2 px-4 rounded-lg hover:bg-opacity-90 transition-colors;
+  }
+  
+  .outlined-btn {
+    @apply border-2 border-dark-sky-blue text-dark-sky-blue py-2 px-4 rounded-lg hover:bg-dark-sky-blue hover:text-white transition-colors;
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideDown {
+  0% { transform: translateY(-20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  50% { transform: translateX(10px); }
+  75% { transform: translateX(-10px); }
+}
+
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.5s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-in-out;
+}
+
+.search-animation {
+  animation: bounce 0.5s;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 10s linear infinite;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-nunito {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bg-wine-red {
+  background-color: hsl(var(--wine-red));
+}
+
+.text-wine-red {
+  color: hsl(var(--wine-red));
+}
+
+.bg-dark-sky-blue {
+  background-color: hsl(var(--dark-sky-blue));
+}
+
+.text-dark-sky-blue {
+  color: hsl(var(--dark-sky-blue));
+}
+
+.bg-neutral-bg {
+  background-color: hsl(var(--neutral-bg));
+}
+
+.bg-dark-text {
+  background-color: hsl(var(--dark-text));
+}
+
+.text-dark-text {
+  color: hsl(var(--dark-text));
+}
+
+.text-light-text {
+  color: hsl(var(--light-text));
+}

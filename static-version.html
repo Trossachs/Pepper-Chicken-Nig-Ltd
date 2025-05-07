@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepper Chicken Nigeria Ltd</title>
+    <meta name="description" content="Authentic Nigerian cuisine featuring our signature pepper chicken and other delicious traditional dishes.">
+    <style>
+        :root {
+            --wine-red: #722F37;
+            --dark-sky-blue: #1A5F7A;
+            --light-gold: #f8cb9c;
+            --cream: #F9F5EB;
+            --dark-gray: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--cream);
+        }
+        
+        header {
+            background-color: var(--wine-red);
+            color: white;
+            padding: 1rem;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 1.5rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--light-gold);
+        }
+        
+        .hero {
+            height: 60vh;
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&h=600');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 1rem;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--dark-sky-blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #124a5f;
+        }
+        
+        .featured {
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+        
+        .featured h2 {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: var(--wine-red);
+        }
+        
+        .dishes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .dish {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .dish:hover {
+            transform: translateY(-10px);
+        }
+        
+        .dish img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .dish-content {
+            padding: 1.5rem;
+        }
+        
+        .dish h3 {
+            margin-bottom: 0.5rem;
+            color: var(--dark-sky-blue);
+        }
+        
+        .dish p {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+        
+        .price {
+            font-weight: bold;
+            color: var(--wine-red);
+            font-size: 1.1rem;
+        }
+        
+        footer {
+            background-color: var(--dark-sky-blue);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .footer-section p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .copyright {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .featured h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Pepper Chicken</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h1>Welcome to Pepper Chicken</h1>
+        <p>Authentic Nigerian cuisine featuring our signature pepper chicken and other delicious traditional dishes.</p>
+        <a href="#" class="btn">View Menu</a>
+    </section>
+    
+    <section class="featured">
+        <h2>Featured Dishes</h2>
+        <div class="dishes">
+            <div class="dish">
+                <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Jollof Rice with Chicken">
+                <div class="dish-content">
+                    <h3>Jollof Rice with Chicken</h3>
+                    <p>Our signature one-pot rice dish cooked with tomatoes, peppers, and aromatic spices, served with perfectly grilled chicken.</p>
+                    <div class="price">₦3,500</div>
+                </div>
+            </div>
+            
+            <div class="dish">
+                <img src="https://pixabay.com/get/g50da28ee36cd41c331e6685695c15db318d17f01c5362d47a21d3d13c59afc27e8b0b6f58340b34f5adee50eef9b5713d30f17a3568dfc77510de82ba560f9ff_1280.jpg" alt="Egusi Soup with Pounded Yam">
+                <div class="dish-content">
+                    <h3>Egusi Soup with Pounded Yam</h3>
+                    <p>Thick melon seed soup with assorted meat and fish, served with smooth pounded yam, a perfect Nigerian comfort food.</p>
+                    <div class="price">₦4,200</div>
+                </div>
+            </div>
+            
+            <div class="dish">
+                <img src="https://images.unsplash.com/photo-1545411708-dc09bab4b4c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Pepper Soup with Assorted Meat">
+                <div class="dish-content">
+                    <h3>Pepper Soup with Assorted Meat</h3>
+                    <p>Hot and spicy Nigerian soup with our secret blend of exotic spices, loaded with tender pieces of beef, goat meat, and offal.</p>
+                    <div class="price">₦3,800</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Location</h3>
+                <p>123 Lagos Street</p>
+                <p>Victoria Island, Lagos</p>
+                <p>Nigeria</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Hours</h3>
+                <p>Monday - Friday: 11am - 10pm</p>
+                <p>Saturday: 11am - 11pm</p>
+                <p>Sunday: 12pm - 9pm</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Phone: +234 123 456 7890</p>
+                <p>Email: info@pepperchicken.com</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 Pepper Chicken Nigeria Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
